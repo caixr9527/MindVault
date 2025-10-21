@@ -1,0 +1,59 @@
+.root-container {
+    -fx-background-color: #f4f4f4;
+}
+
+.root {
+    /*-fx-focus-color: #f0f0f0;*/
+    /*-fx-faint-focus-color: #f0f0f0;*/
+}
+
+.split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+/* 对话框按钮基础样式 */
+.exit-dialog-button {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #d0d0d0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-min-width: 80px;
+    -fx-min-height: 10px;
+    -fx-font-family: 'SimHei';
+    -fx-font-weight: bold;
+}
+
+/* 对话框按钮悬停样式 */
+.exit-dialog-button:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #c0c0c0;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+}
+
+.add-session-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+.add-session-button:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-cursor: hand;
+}
+
+/* 对话框样式 */
+.dialog-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+}
+
+.dialog-pane .content {
+    -fx-font-family: 'SimHei';
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #f8f8f8;
+}
