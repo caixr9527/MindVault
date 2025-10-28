@@ -1,9 +1,11 @@
 package com.mind.vault.utils;
 
+import com.mind.vault.config.ApiConfig;
 import com.mind.vault.model.R;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
 import io.netty.handler.timeout.WriteTimeoutHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -16,6 +18,9 @@ import java.util.concurrent.TimeUnit;
 public class ApiClient {
 
     private final WebClient webClient;
+
+    @Autowired
+    private ApiConfig apiConfig;
     
     public ApiClient() {
         // 创建带有超时配置的HttpClient
@@ -29,7 +34,7 @@ public class ApiClient {
 
         this.webClient = WebClient.builder()
                 .clientConnector(new ReactorClientHttpConnector(httpClient))
-                .baseUrl("http://127.0.0.1:23140/api/v1/core")
+                .baseUrl(apiConfig.getUrl())
                 .build();
     }
     

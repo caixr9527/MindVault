@@ -3,3 +3,7 @@ server:
 spring:
     jmx: 
         enabled: false
+
+
+api:
+  url: http://127.0.0.1:23140/api/v1/core
